@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>you</title>
+    <link rel="stylesheet" href="love.css">
+    
+</head>
+<body>
+  <button id="musicBtn" ></button>
+<audio id="back" src="dre.mp3" loop></audio>
+    <div class="love">
+        <img src="https://media.tenor.com/xWx4HChSuhgAAAAj/mysweetpiano-sanrio.gif" id="cesar" alt="cute cesar pic">
+
+        <!-- question-->
+        <h4>❤️muchas gachas por la felicidad que haz aportado a mi vida hasta ahora y quiero que sepas que considero y agradezco tus muestras de afecto y como te haz abierto un poco mas hacia mi ultimamente mi esfuerzo ha dado frutos :) y quisiera proponerte la posibilidad de que crezcamos incluso mas cercanos el uno al otro lado a lado❤️  </h4>
+        <!--botones-->
+      <div class="boton">
+             <a href="wi.html"><button id="YES"  type="submit">YES</button></a>
+        <button id="no"   type="submit">No</button>
+        </div>
+  
+</div>
+    
+
+    </div>
+
+<script>
+      const noBtn = document.getElementById('no');
+      const loveDiv = document.querySelector('.love');
+
+      loveDiv.style.position = 'relative';
+      noBtn.style.position = 'absolute';
+
+      noBtn.addEventListener('mouseenter', function() {
+        const divRect = loveDiv.getBoundingClientRect();
+        const btnRect = noBtn.getBoundingClientRect();
+        const maxX = loveDiv.clientWidth - noBtn.offsetWidth;
+        const maxY = loveDiv.clientHeight - noBtn.offsetHeight;
+        const randX = Math.random() * maxX;
+        const randY = Math.random() * maxY;
+        noBtn.style.left = randX + 'px';
+        noBtn.style.top = randY + 'px';
+      });
+    </script>
+  
+</body>
+</html>

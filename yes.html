@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>you</title>
+    <link rel="stylesheet" href="yes.css">
+</head>
+<body>
+  <button id="musicBtn" ></button>
+<audio id="back" src="dre.mp3" loop></audio>
+    <div class="love">
+        <img src="https://media1.tenor.com/m/WM8GgiECn4QAAAAd/love-you-hamster.gif" id="cesar" alt="cute cesar pic">
+
+        <!-- question-->
+        <h2>❤️GACHASSS!!❤️ </h2>
+        <h3>te quiero decir algo</h3>
+        <!--botones-->
+       <div class="boton">
+  <a href="love.html"><button id="YES" type="button">toca </button></a>
+</div>
+    
+
+    </div>
+
+<script>
+  const musicBtn = document.getElementById('musicBtn');
+  const backAudio = document.getElementById('back');
+  let isPlaying = false;
+
+  musicBtn.addEventListener('click', function() {
+    if (!isPlaying) {
+      backAudio.play();
+      musicBtn.classList.add('playing');
+      isPlaying = true;
+    } else {
+      backAudio.pause();
+      musicBtn.classList.remove('playing');
+      isPlaying = false;
+    }
+  });
+</script>
+
+
+</body>
+</html>

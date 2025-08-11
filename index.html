@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>you</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<audio id="back" src="dre.mp3" loop></audio>
+    <div class="love">
+        <img src="https://media1.tenor.com/m/tnvcJBTuFj4AAAAd/bunyihop.gif" id="cesar" alt="cute cesar pic">
+
+        <!-- question-->
+        <h2>¿Puedo ser tu pareja de entreno?</h2>
+        <!--botones-->
+        <div class="boton">
+             <a href="yes.html"><button id="YES"  type="submit">YES</button></a>
+        <button id="no"   type="submit">No</button>
+        </div>
+    
+    </div>
+
+    <script>
+      const noBtn = document.getElementById('no');
+      const loveDiv = document.querySelector('.love');
+
+      loveDiv.style.position = 'relative';
+      noBtn.style.position = 'absolute';
+
+      noBtn.addEventListener('mouseenter', function() {
+        const divRect = loveDiv.getBoundingClientRect();
+        const btnRect = noBtn.getBoundingClientRect();
+        const maxX = loveDiv.clientWidth - noBtn.offsetWidth;
+        const maxY = loveDiv.clientHeight - noBtn.offsetHeight;
+        const randX = Math.random() * maxX;
+        const randY = Math.random() * maxY;
+        noBtn.style.left = randX + 'px';
+        noBtn.style.top = randY + 'px';
+      });
+    </script>
+
+
+
+</body>
+</html>
